@@ -14,14 +14,16 @@ public class Employee {
 		final int part_time_hour = 4;
 		final int wage_per_hour = 20;
 		final int total_working_days = 20;
+		final int max_working_hours = 100;
 
 		// Initializing the variable
 		int salary = 0;
 		int daily_hour = 0;
 		int total_working_hour = 0;
 		int monthly_salary = 0;
+		int day = 1;
 
-		for (int day = 1; day <= total_working_days; day++) {
+		while (day <= total_working_days && total_working_hour <= max_working_hours) {
 			/*
 			 * Used Math.random()*3 to get two values i.e., 0, 1 and 2 0 - Absent 1 -
 			 * Present Full time 2 - Present Part time
@@ -56,6 +58,8 @@ public class Employee {
 			total_working_hour = total_working_hour + daily_hour;
 			System.out.println("Total working hours : " + total_working_hour);
 			System.out.println("----------------------------------------------");
+			
+			day+=1;
 		}
 
 		// Calculating Monthly salary of Employee
