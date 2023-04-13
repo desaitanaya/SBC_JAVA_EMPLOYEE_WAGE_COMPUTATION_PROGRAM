@@ -22,20 +22,30 @@ public class Employee {
 
 		// Initializing the variable
 		int salary = 0;
+		int daily_hour = 0;
 
-		// For checking if Employee is present or not
-		if (attendance == present_full_time) {
-			// Calculating the salary is Employee is Present for Full time
-			salary = full_day_hour * wage_per_hour;
-			System.out.println("Employee is Present for Full time and the Salary is : Rs." + salary);
-		} else if (attendance == present_part_time) {
-			// Calculating the salary is Employee is Present for Part time
-			salary = part_time_hour * wage_per_hour;
-			System.out.println("Employee is Present for Part time and the Salary is : Rs." + salary);
-		} else {
-			System.out.println("Employee is Absent and the Salary is : Rs." + salary);
+		// Switch case
+		switch (attendance) {
+		// Full time
+		case present_full_time:
+			daily_hour = 8;
+			System.out.println("Employee is Present for Full time");
+			break;
+
+		// Part time
+		case present_part_time:
+			daily_hour = 4;
+			System.out.println("Employee is Present for Part time");
+			break;
+
+		case 0:
+			System.out.println("Employee is Absent");
+			break;
 		}
 
+		// Calculating salary of an Employee
+		salary = daily_hour * wage_per_hour;
+		System.out.println("Salary of Employee is : Rs." + salary);
 	}
 
 }
