@@ -3,6 +3,12 @@ public class Employee {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		//Method declaration
+		calculateMonthlyWage();
+		
+	}
+	
+	public static void calculateMonthlyWage() {
 		System.out.println();
 		System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM");
 		System.out.println("----------------------------------------------");
@@ -65,6 +71,7 @@ public class Employee {
 		// Calculating Monthly salary of Employee
 		monthly_salary = total_working_hour * wage_per_hour;
 		System.out.println("Monthly salary of Employee is : Rs." + monthly_salary);
+		
 	}
-
+		
 }
